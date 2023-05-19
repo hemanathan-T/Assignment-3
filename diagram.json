@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "HEMANATHAN T",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 22, "left": -136.67, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": 6.17, "left": 104.97, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "ultrasonic1:VCC", "esp:3V3", "red", [ "v78.73", "h-212.44" ] ],
+    [ "ultrasonic1:TRIG", "esp:D5", "green", [ "v13.4", "h-223.77" ] ],
+    [ "ultrasonic1:GND", "esp:GND.1", "black", [ "v69.4", "h-243.1" ] ],
+    [
+      "ultrasonic1:ECHO",
+      "esp:D18",
+      "green",
+      [
+        "v24.06",
+        "h-3.77",
+        "v0",
+        "h0",
+        "v0",
+        "h0",
+        "v0",
+        "h0",
+        "v0",
+        "h-200.67",
+        "v-22",
+        "h-6.67"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
